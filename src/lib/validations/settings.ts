@@ -59,6 +59,8 @@ export const generalTabSchema = z.object({
 
   // Data export settings
   defaultExport: z.enum(["XLSX", "PDF"]),
+
+  textDirection: z.enum(["left-to-right", "right-to-left"]),
   includeMetaData: z.boolean(),
 });
 
@@ -174,6 +176,7 @@ export const defaultGeneralFormData: GeneralTabFormData = {
   darkThemeStatus: false,
   defaultExport: "XLSX",
   includeMetaData: false,
+  textDirection: "left-to-right",
 };
 
 // Default values for notification tab only
